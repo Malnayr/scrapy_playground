@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var quotes = [];
+            $.getJSON('quotes.json', function(data){
+                $.each(data, function(k,v){
+
+                    var tRow = "<tr>" + "<td>" + v.author + "</td>" +
+                       "<td>" + v.text + "</td>" + "<td>" + v.tags + "</td>" + "</tr>"
+                       $(tRow).appendTo("#quoteData tbody");
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <table id="quoteData" border="2">
+        <thead>
+            <th>Author</th>
+            <th>Text</th>
+            <th>Tags</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

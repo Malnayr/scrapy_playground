@@ -4,4 +4,5 @@
 .idea/modules.xml
 .idea/scrapy_playground.iml
 .idea/workspace.xml
-
+__init__.py
+.pyc
